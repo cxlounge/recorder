@@ -18,4 +18,4 @@ jobs:
           # GitHub API Token
           #github_token: # optional, default is ${{ github.token }}
           # Additional parameters for AST scan
-          #additional_params: # optional, default is
+          additional_params: --scan-types sast,sca,kics
