@@ -13,9 +13,9 @@ jobs:
         with:
           base_uri: https://eu.ast.checkmarx.net/
           cx_tenant: French_Team
-          cx_client_id: ${{CX1_CLIENT_ID}}
-          cx_client_secret: ${{CX1_CLIENT_SECRET}}
+          cx_client_id: ${{secrets.CX1_CLIENT_ID}}
+          cx_client_secret: ${{secrets.CX1_CLIENT_SECRET}}
           # GitHub API Token
           #github_token: # optional, default is ${{ github.token }}
           # Additional parameters for AST scan
-          #additional_params: # optional, default is 
+          #additional_params: # optional, default is
