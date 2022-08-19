@@ -1,0 +1,21 @@
+name: Checkmarx One Scan
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkmarx AST Github Action
+        uses: Checkmarx/ast-github-action@2.0.7
+        with:
+          base_uri: https://eu.ast.checkmarx.net/
+          cx_tenant: French_Team
+          cx_client_id: ${{CX1_CLIENT_ID}}
+          cx_client_secret: ${{CX1_CLIENT_SECRET}}
+          # GitHub API Token
+          #github_token: # optional, default is ${{ github.token }}
+          # Additional parameters for AST scan
+          #additional_params: # optional, default is 
